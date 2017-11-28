@@ -9,6 +9,6 @@ public interface ProgressChannel {
 
     String GLOBAL_PROGRESS_STREAM = "globalProgressStream";
 
-    @Output(ProgressChannel.GLOBAL_PROGRESS_STREAM)
+    @Output("globalProgressStream")
     SubscribableChannel globalProgressStream();
 }

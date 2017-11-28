@@ -7,15 +7,17 @@ import java.io.Serializable;
 public class GlobalProgressStream implements Serializable{
 
     @JsonProperty(value = "notificationId")
-    private Integer notificationId;
+    private int notificationId;
     @JsonProperty(value = "firstUserId")
     private String firstUserId;
     @JsonProperty(value = "lastUserId")
     private String lastUserId;
     @JsonProperty(value = "successRecord")
-    private Integer successRecord;
+    private int successRecord;
     @JsonProperty(value = "failedRecord")
-    private Integer failedRecord;
+    private int failedRecord;
+
+    public GlobalProgressStream() {};
 
     public GlobalProgressStream(Integer notificationId, String firstUserId, String lastUserId, Integer successRecord, Integer failedRecord) {
         this.notificationId = notificationId;
