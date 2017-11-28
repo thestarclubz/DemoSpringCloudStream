@@ -1,12 +1,20 @@
 package com.example.DemoSpringCloudStream.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class GlobalProgressStream{
+import java.io.Serializable;
 
+public class GlobalProgressStream implements Serializable{
+
+    @JsonProperty(value = "notificationId")
     private Integer notificationId;
+    @JsonProperty(value = "firstUserId")
     private String firstUserId;
+    @JsonProperty(value = "lastUserId")
     private String lastUserId;
+    @JsonProperty(value = "successRecord")
     private Integer successRecord;
+    @JsonProperty(value = "failedRecord")
     private Integer failedRecord;
 
     public GlobalProgressStream(Integer notificationId, String firstUserId, String lastUserId, Integer successRecord, Integer failedRecord) {
@@ -55,5 +63,16 @@ public class GlobalProgressStream{
 
     public void setFailedRecord(Integer failedRecord) {
         this.failedRecord = failedRecord;
+    }
+
+    @Override
+    public String toString() {
+        return "GlobalProgressStream{" +
+                "notificationId=" + notificationId +
+                ", firstUserId='" + firstUserId + '\'' +
+                ", lastUserId='" + lastUserId + '\'' +
+                ", successRecord=" + successRecord +
+                ", failedRecord=" + failedRecord +
+                '}';
     }
 }

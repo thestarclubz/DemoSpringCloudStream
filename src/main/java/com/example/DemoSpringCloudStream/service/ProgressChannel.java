@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public interface ProgressChannel {
 
-    String GLOBAL_PROGRESS_STREAM = "GlobalProgressStream";
+    String GLOBAL_PROGRESS_STREAM = "globalProgressStream";
 
     @Output(ProgressChannel.GLOBAL_PROGRESS_STREAM)
     SubscribableChannel globalProgressStream();
